@@ -2,9 +2,19 @@ package com.example.pizzaorderapp.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.pizzaorderapp.R
+
+val heebo = FontFamily(
+    Font(R.font.heeboregular, weight = FontWeight.Normal),
+    Font(R.font.heebomedium, weight = FontWeight.Medium),
+    Font(R.font.heebobold, weight = FontWeight.Bold),
+    Font(R.font.heebosemibold, weight = FontWeight.SemiBold),
+    Font(R.font.heeboextrabold, weight = FontWeight.ExtraBold)
+)
 
 // Set of Material typography styles to start with
 val Typography = Typography(

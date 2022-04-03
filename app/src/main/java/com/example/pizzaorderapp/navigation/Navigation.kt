@@ -1,6 +1,7 @@
 package com.example.pizzaorderapp.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.constraintlayout.compose.ExperimentalMotionApi
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -11,6 +12,7 @@ import com.example.pizzaorderapp.ui.screens.payment.PaymentScreen
 import com.example.pizzaorderapp.viewModel.MainViewModel
 
 
+@ExperimentalMotionApi
 @Composable
 fun Navigation(
     navController: NavHostController,

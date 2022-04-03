@@ -1,7 +1,10 @@
 package com.example.pizzaorderapp.viewModel
 
 import android.app.Application
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pizzaorderapp.data.models.Pizza
@@ -16,6 +19,10 @@ class MainViewModel @Inject constructor(
     application: Application
 ): AndroidViewModel(application)
 {
+
+    val firstmode = mutableStateOf(true)
+
+    var sizeprogress = mutableStateOf(0f)
 
     var allPizza = mutableListOf<Pizza>()
 

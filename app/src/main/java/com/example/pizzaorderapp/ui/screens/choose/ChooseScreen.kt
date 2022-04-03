@@ -21,28 +21,18 @@ import com.example.pizzaorderapp.viewModel.MainViewModel
 @Composable
 fun ChooseScreen(navController: NavHostController, mainViewModel: MainViewModel) {
 
-
-
-    mainViewModel.addPizza()
-
-    Log.d("PIZZATEST", mainViewModel.allPizza.toString())
-    Log.d("PIZZATEST", "hi")
-
     Column(
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
-            .clickable {
-                navController.navigate(route = Screens.Payment.passOrder(
-                    3,
-                    1400,
-                    "Mitooooooooooo"
-                ))
-            }
-            .background(Color.White)
-            .padding(32.dp, 16.dp)
-            .height(104.dp)
-            .fillMaxWidth()
-
+            .fillMaxSize()
+            //.clickable {
+            //    navController.navigate(route = Screens.Payment.passOrder(
+            //        3,
+            //        1400,
+            //        "Mitooooooooooo"
+            //    ))
+            //}
+            .background(Color.Red)
     ){}
 
 }

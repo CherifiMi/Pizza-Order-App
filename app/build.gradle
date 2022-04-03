@@ -78,4 +78,7 @@ dependencies {
 
     //Navigation Animation
     implementation "com.google.accompanist:accompanist-navigation-animation:0.16.0"
+
+    //Motion Layout
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0"
 }

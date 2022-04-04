@@ -1,0 +1,41 @@
+{
+  ConstraintSets: {
+    start: {
+      pizza_pic: {
+        width: 250,
+        height: 250,
+        start: ['parent', 'start',200],
+        end: ['parent', 'end',200],
+        top: ['parent', 'top',200],
+        bottom: ['parent', 'bottom',200]
+      }
+    },
+    end: {
+      pizza_pic: {
+        width: 350,
+        height: 350,
+        start: ['parent', 'start',200],
+        end: ['parent', 'end',200],
+        top: ['parent', 'top',200],
+        bottom: ['parent', 'bottom',200]
+      }
+    }
+  },
+  Transitions: {
+    default: {
+      from: 'start',
+      to: 'end',
+      pathMotionArc: 'startHorizontal',
+      KeyFrames: {
+        KeyAttributes: [
+          {
+            target: ['pizza_pic'],
+            frames: [0,50,100],
+            translationX: [0, 40, 0],
+            rotationZ: [0, 40, 80]
+          }
+        ]
+      }
+    }
+  }
+}

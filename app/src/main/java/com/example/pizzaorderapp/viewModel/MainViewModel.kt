@@ -26,6 +26,8 @@ class MainViewModel @Inject constructor(
 
     var allPizza = mutableListOf<Pizza>()
 
+
+
     fun addPizza(){
         allPizza.add(Pizza(
             1,

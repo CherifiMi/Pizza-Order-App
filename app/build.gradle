@@ -81,4 +81,7 @@ dependencies {
 
     //Motion Layout
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0"
+
+    //slider
+    implementation "com.github.krottv:compose-sliders:1.0.0"
 }

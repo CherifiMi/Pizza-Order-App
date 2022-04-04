@@ -32,7 +32,7 @@
             target: ['pizza_pic'],
             frames: [0,50,100],
             translationX: [0, 40, 0],
-            rotationZ: [0, 40, 80]
+            rotationZ: [0, 80, 160]
           }
         ]
       }

@@ -24,8 +24,13 @@ class MainViewModel @Inject constructor(
 
     var sizeprogress = mutableStateOf(0f)
 
-    var allPizza = mutableListOf<Pizza>()
+    var pizzaQuantity = mutableStateOf(1)
 
+    val sizename = mutableStateOf("Small")
+
+    val currentpizza = mutableStateOf(2)
+
+    var allPizza = mutableListOf<Pizza>()
 
 
     fun addPizza(){

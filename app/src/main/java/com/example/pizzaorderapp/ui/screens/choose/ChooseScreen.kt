@@ -1,6 +1,8 @@
 package com.example.pizzaorderapp.ui.screens.choose
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.constraintlayout.compose.ExperimentalMotionApi
@@ -15,13 +17,15 @@ import com.example.pizzaorderapp.viewModel.MainViewModel
 //    "Mitooooooooooo"
 //))
 
+@ExperimentalAnimationApi
+@ExperimentalMaterialApi
 @ExperimentalMotionApi
 @Composable
 fun ChooseScreen(navController: NavHostController, mainViewModel: MainViewModel) {
 
     Box(Modifier.fillMaxSize()){
         UnderLayer(mainViewModel)
-        //TopLayer(mainViewModel)
+        TopLayer(mainViewModel)
     }
 }
 

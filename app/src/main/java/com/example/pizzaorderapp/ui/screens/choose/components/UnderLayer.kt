@@ -1,7 +1,9 @@
 package com.example.pizzaorderapp.ui.screens.choose.components
 
 import android.util.Log
+import androidx.compose.animation.*
 import androidx.compose.animation.core.Animatable
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -27,6 +29,7 @@ import com.example.pizzaorderapp.R
 import com.example.pizzaorderapp.ui.theme.*
 import com.example.pizzaorderapp.viewModel.MainViewModel
 
+@ExperimentalAnimationApi
 @ExperimentalMotionApi
 @Composable
 fun UnderLayer(mainViewModel: MainViewModel) {
@@ -36,39 +39,68 @@ fun UnderLayer(mainViewModel: MainViewModel) {
             .fillMaxSize()
             .background(Blue1)
     ){
-
-
         Spacer(modifier = Modifier.height(32.dp))
 
-        Column(
-            verticalArrangement = Arrangement.Top,
+        AnimatedVisibility(
             modifier = Modifier
-                .fillMaxWidth()
-                .weight(15f)
-        ){
-            GoBackToTopLayer({})
-            PizzaTitle("Margherita Pizza")
-            Raiting(80)
+                .weight(15f),
+            visible = !mainViewModel.firstmode.value,
+            enter =  fadeIn(),
+            exit =  fadeOut()
+        ) {
+            Column(
+                verticalArrangement = Arrangement.Top,
+                modifier = Modifier
+                    .fillMaxWidth()
+            ){
+                GoBackToTopLayer({
+                    mainViewModel.firstmode.value = true
+                })
+                PizzaTitle("Margherita Pizza")
+                Raiting(80)
+            }
         }
 
-        Box(
-            contentAlignment = Alignment.Center,
+        AnimatedVisibility(
             modifier = Modifier
+                .weight(50f),
+            visible = !mainViewModel.firstmode.value,
+            enter =  slideInVertically(),
+            exit =  slideOutVertically()+ shrinkOut()
+        ) {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+            ){
+                PizzaImg(mainViewModel)
+                SizeSlider(mainViewModel)
+            }
+        }
+
+        AnimatedVisibility(
+            modifier = Modifier
+                .weight(35f),
+            visible = !mainViewModel.firstmode.value,
+            enter =  fadeIn(),
+            exit =  fadeOut()
+        ) {
+            Box(modifier = Modifier
                 .fillMaxWidth()
-                .weight(50f)
-        ){
-            PizzaImg(mainViewModel)
-            SizeSlider(mainViewModel)
+            ){
+                Column (horizontalAlignment = Alignment.CenterHorizontally){
+                    SizeName(mainViewModel)
+                    Spacer(modifier = Modifier.height(70.dp))
+                    QuantityPicker(mainViewModel)
+                    Spacer(modifier = Modifier.height(70.dp))
+                    PlaceOrderBtn (
+                        {
+                            Log.d("HILLO", "hi")
+                        }
+                    )
+                }
+            }
         }
-
-
-        Box(modifier = Modifier
-            .fillMaxWidth()
-            .weight(35f)
-        ){
-
-        }
-
     }
 }
 
@@ -135,18 +167,20 @@ fun SizeSlider(mainViewModel: MainViewModel) {
                 modifier = Modifier
                     .weight(1f),
                 colors = SliderDefaults.colors(
-                    thumbColor = Yellow,
+                    thumbColor = Red,
                     activeTrackColor = Color.Transparent,
                     inactiveTrackColor = Color.Transparent
                 ),
                 value = progress,
-                onValueChange = {
-                    Log.d("TESTHILLO", mainViewModel.sizeprogress.toString())
-                    progress = it
-                                },
+                onValueChange = {progress = it},
                 onValueChangeFinished = {
-                    Log.d("TESTHILLO", mainViewModel.sizeprogress.toString())
                     mainViewModel.sizeprogress.value = progress
+                    when(progress){
+                        0f-> mainViewModel.sizename.value ="Small"
+                        0.5f->mainViewModel.sizename.value ="Medium"
+                        1.0f->mainViewModel.sizename.value ="Large"
+                        else -> {mainViewModel.sizename.value ="Small"}
+                    }
                 },
                 steps = 1
             )
@@ -195,13 +229,68 @@ fun PizzaImg(mainViewModel: MainViewModel) {
 }
 
 @Composable
-fun SizeName() {
-
+fun SizeName(mainViewModel: MainViewModel) {
+    Text(
+        text = mainViewModel.sizename.value ,
+        color = MyWhite,
+        fontFamily = heebo,
+        fontWeight = FontWeight.Medium,
+        fontSize = 18.sp
+    )
 }
 
 @Composable
-fun QuantityPicker() {
-
+fun QuantityPicker(mainViewModel: MainViewModel) {
+    Row(
+        horizontalArrangement = Arrangement.Start,
+        modifier = Modifier
+            .height(40.dp)
+            .fillMaxWidth()
+    ) {
+        Text(
+            modifier = Modifier.padding(32.dp, 0.dp, 0.dp, 0.dp),
+            text = "Quantity",
+            color = MyWhite,
+            fontFamily = heebo,
+            fontWeight = FontWeight.Normal,
+            fontSize = 18.sp
+        )
+        Card(
+            backgroundColor = Blue1 ,
+            shape = RoundedCornerShape(100),
+            border = BorderStroke(
+                1.dp, MyWhite
+            ),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(32.dp, 0.dp)
+        ){
+            Row (horizontalArrangement = Arrangement.SpaceBetween){
+                IconButton(
+                    modifier = Modifier.offset((-4).dp,0.dp),
+                    onClick = { if(mainViewModel.pizzaQuantity.value >= 2){
+                        mainViewModel.pizzaQuantity.value -= 1
+                    }
+                    }
+                ) {
+                    Image(painter = painterResource(id = R.drawable.minbtn), contentDescription = "")
+                }
+                Text(
+                    text = mainViewModel.pizzaQuantity.value.toString(),
+                    color = Red,
+                    fontFamily = heebo,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 24.sp
+                )
+                IconButton(
+                    modifier = Modifier.offset((4).dp,0.dp),
+                    onClick = { mainViewModel.pizzaQuantity.value += 1 }
+                ) {
+                    Image(painter = painterResource(id = R.drawable.plsbtn), contentDescription = "")
+                }
+            }
+        }
+    }
 }
 
 @Composable

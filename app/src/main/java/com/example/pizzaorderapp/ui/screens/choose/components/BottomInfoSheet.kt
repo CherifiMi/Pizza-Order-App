@@ -57,6 +57,7 @@ fun BottomInfoSheet(mainViewModel: MainViewModel) {
             PizzaDec("Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.  including versions of Lorem .")
 
             AddToCartBtn({
+                mainViewModel.currentpizza.value +=1
                 mainViewModel.firstmode.value = false
             })
 

@@ -21,7 +21,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.pizzaorderapp.ui.screens.choose.*
 import com.example.pizzaorderapp.ui.theme.*
 import com.example.pizzaorderapp.viewModel.MainViewModel
 

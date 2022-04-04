@@ -11,12 +11,6 @@ import com.example.pizzaorderapp.ui.screens.choose.components.TopLayer
 import com.example.pizzaorderapp.ui.screens.choose.components.UnderLayer
 import com.example.pizzaorderapp.viewModel.MainViewModel
 
-//navController.navigate(route = Screens.Payment.passOrder(
-//    3,
-//    1400,
-//    "Mitooooooooooo"
-//))
-
 @ExperimentalAnimationApi
 @ExperimentalMaterialApi
 @ExperimentalMotionApi
@@ -24,7 +18,7 @@ import com.example.pizzaorderapp.viewModel.MainViewModel
 fun ChooseScreen(navController: NavHostController, mainViewModel: MainViewModel) {
 
     Box(Modifier.fillMaxSize()){
-        UnderLayer(mainViewModel)
+        UnderLayer(mainViewModel, navController)
         TopLayer(mainViewModel)
     }
 }

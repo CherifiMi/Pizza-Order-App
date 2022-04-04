@@ -16,9 +16,10 @@ import androidx.compose.ui.unit.sp
 import com.example.pizzaorderapp.ui.theme.MyWhite
 import com.example.pizzaorderapp.ui.theme.Red
 import com.example.pizzaorderapp.ui.theme.heebo
+import com.example.pizzaorderapp.viewModel.MainViewModel
 
 @Composable
-fun PlaceOrderBtn(clicked:()->Unit) {
+fun PlaceOrderBtn(clicked: () -> Unit, mainViewModel: MainViewModel) {
     Card(
         shape = RoundedCornerShape(100.dp),
         modifier = Modifier
@@ -31,7 +32,7 @@ fun PlaceOrderBtn(clicked:()->Unit) {
             colors = ButtonDefaults.buttonColors(backgroundColor = Red)
         ){
             Text(
-                text ="Add to Cart",
+                text ="Place order $${mainViewModel.price.value*mainViewModel.pizzaQuantity.value/100}.00",
                 color = MyWhite,
                 fontFamily = heebo,
                 fontWeight = FontWeight.Bold,

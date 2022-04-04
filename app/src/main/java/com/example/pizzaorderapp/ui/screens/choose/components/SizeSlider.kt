@@ -52,10 +52,22 @@ fun SizeSlider(mainViewModel: MainViewModel) {
                 onValueChangeFinished = {
                     mainViewModel.sizeprogress.value = progress
                     when(progress){
-                        0f-> mainViewModel.sizename.value ="Small"
-                        0.5f->mainViewModel.sizename.value ="Medium"
-                        1.0f->mainViewModel.sizename.value ="Large"
-                        else -> {mainViewModel.sizename.value ="Small"}
+                        0f-> {
+                            mainViewModel.price.value = mainViewModel.price1.value
+                            mainViewModel.sizename.value = "Small"
+                        }
+                        0.5f-> {
+                            mainViewModel.price.value = mainViewModel.price2.value
+                            mainViewModel.sizename.value = "Medium"
+                        }
+                        1.0f-> {
+                            mainViewModel.price.value = mainViewModel.price3.value
+                            mainViewModel.sizename.value = "Large"
+                        }
+                        else -> {
+                            mainViewModel.price.value = mainViewModel.price1.value
+                            mainViewModel.sizename.value ="Small"
+                        }
                     }
                 },
                 steps = 1

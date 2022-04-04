@@ -20,17 +20,34 @@ class MainViewModel @Inject constructor(
 ): AndroidViewModel(application)
 {
 
-    val firstmode = mutableStateOf(true)
-
+    var firstmode = mutableStateOf(true)
     var sizeprogress = mutableStateOf(0f)
-
     var pizzaQuantity = mutableStateOf(1)
-
-    val sizename = mutableStateOf("Small")
-
-    val currentpizza = mutableStateOf(2)
+    var sizename = mutableStateOf("Small")
+    var currentpizza = mutableStateOf(1)
 
     var allPizza = mutableListOf<Pizza>()
+
+    fun resetData(){
+        firstmode.value = true
+        sizeprogress.value = 0f
+        pizzaQuantity.value = 1
+        sizename.value = "Small"
+        currentpizza.value = 1
+        price.value = price1.value
+    }
+
+    val name = mutableStateOf("My Pizza")
+    val description = mutableStateOf("HIIIIIIII Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.  including versions of Lorem .",)
+    val price1 = mutableStateOf(1000)
+    val price2 = mutableStateOf(2000)
+    val price3 = mutableStateOf(3000)
+
+    val price = mutableStateOf(1000)
+
+    val pic_url = mutableStateOf("https://i.pinimg.com/originals/90/8c/62/908c62c7153b37d2e7d41f314a257535.jpg")
+    val ingredients = mutableStateOf(listOf("Cheese","Pizza","Potato"))
+    val rating = mutableStateOf(1)
 
 
     fun addPizza(){

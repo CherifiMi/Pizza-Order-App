@@ -4,15 +4,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Slider
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -41,6 +39,8 @@ class MainActivity : ComponentActivity() {
     lateinit var navController: NavHostController
     private val mainViewModel: MainViewModel by viewModels()
 
+    @ExperimentalAnimationApi
+    @ExperimentalMaterialApi
     @ExperimentalMotionApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,11 +55,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-@ExperimentalMotionApi
-@Composable
-fun ProfileHeader(progress: Float) {
-
-
-}
-

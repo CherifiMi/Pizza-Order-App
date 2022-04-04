@@ -48,12 +48,12 @@ fun BottomInfoSheet(mainViewModel: MainViewModel) {
                 .background(Blue2)
                 .padding(0.dp)
         ){
-            PizzaName("Margherita Pizza")
+            PizzaName(mainViewModel.name.value)
 
-            val ings = listOf("hisfsdfsdf","hidsfsdf","hsdfsfsdfi","hsfddsfsfsdi","hsfddsfsfsdi")
+            val ings = mainViewModel.ingredients.value
             PizzaIng(ings)
-            PizzaPrice(1399)
-            PizzaDec("Lorem Ipsum is Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.  including versions of Lorem .")
+            PizzaPrice(mainViewModel.price.value)
+            PizzaDec(mainViewModel.description.value)
 
             AddToCartBtn({
                 mainViewModel.currentpizza.value +=1
@@ -120,7 +120,7 @@ fun PizzaIng(ings: List<String>) {
 fun PizzaPrice(p: Int) {
     Text(
         modifier = Modifier.padding(36.dp,24.dp,36.dp,24.dp),
-        text = "${p.toFloat()/100f}$",
+        text = "${p.toFloat()/100f}0$",
         color = Yellow,
         fontFamily = heebo,
         fontWeight = FontWeight.Bold,

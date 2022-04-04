@@ -54,15 +54,14 @@ fun UnderLayer(mainViewModel: MainViewModel, navController: NavHostController) {
             QuantityPickerPizza(
                 mainViewModel
             ) {
-                mainViewModel.firstmode.value = true
-
                 navController.navigate(
                     route = Screens.Payment.passOrder(
-                        3,
-                        1400,
-                        "Mitooooooooooo"
+                        mainViewModel.pizzaQuantity.value,
+                        mainViewModel.price.value,
+                        mainViewModel.name.value
                     )
                 )
+                mainViewModel.resetData()
             }
         }
     }

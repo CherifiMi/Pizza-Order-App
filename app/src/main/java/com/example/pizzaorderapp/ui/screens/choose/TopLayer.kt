@@ -27,7 +27,7 @@ fun TopLayer(mainViewModel: MainViewModel) {
             enter =  slideInVertically(),
             exit =  slideOutVertically()+ shrinkOut()
         ){
-            BigPizzaImg()
+            BigPizzaImg(mainViewModel)
         }
 
         AnimatedVisibility(

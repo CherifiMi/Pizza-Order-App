@@ -14,10 +14,10 @@ fun TitleRating(mainViewModel: MainViewModel) {
         modifier = Modifier
             .fillMaxWidth()
     ){
-        GoBackToTopLayer({
-            mainViewModel.firstmode.value = true
-        })
+        GoBackToTopLayer {
+            mainViewModel.resetData()
+        }
         PizzaTitle("Margherita Pizza")
-        Raiting(80)
+        Raiting(mainViewModel.rating.value.toInt()*25)
     }
 }

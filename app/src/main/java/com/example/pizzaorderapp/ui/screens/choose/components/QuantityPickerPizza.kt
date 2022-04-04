@@ -1,6 +1,5 @@
 package com.example.pizzaorderapp.ui.screens.choose.components
 
-import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,7 +17,7 @@ fun QuantityPickerPizza(mainViewModel: MainViewModel, function: () -> Unit) {
             Spacer(modifier = Modifier.height(70.dp))
             QuantityPicker(mainViewModel)
             Spacer(modifier = Modifier.height(70.dp))
-            PlaceOrderBtn ({function()})
+            PlaceOrderBtn ({function()}, mainViewModel)
         }
     }
 }

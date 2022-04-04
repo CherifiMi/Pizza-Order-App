@@ -28,6 +28,18 @@ fun PaymentScreen(
             modifier = Modifier.clickable {
                 navController.popBackStack()
             },
+            text = args?.getInt("quantity").toString(),
+            fontSize = 50.sp)
+        Text(
+            modifier = Modifier.clickable {
+                navController.popBackStack()
+            },
+            text = args?.getInt("price").toString(),
+            fontSize = 50.sp)
+        Text(
+            modifier = Modifier.clickable {
+                navController.popBackStack()
+            },
             text = args?.getString("pizza").toString(),
             fontSize = 50.sp)
 

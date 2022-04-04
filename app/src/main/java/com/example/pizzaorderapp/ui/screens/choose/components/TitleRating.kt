@@ -17,7 +17,7 @@ fun TitleRating(mainViewModel: MainViewModel) {
         GoBackToTopLayer {
             mainViewModel.resetData()
         }
-        PizzaTitle("Margherita Pizza")
-        Raiting(mainViewModel.rating.value.toInt()*25)
+        PizzaTitle(mainViewModel.name.value)
+        Raiting(mainViewModel.rating.value*25)
     }
 }

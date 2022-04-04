@@ -20,7 +20,7 @@ fun SmallCards(mainViewModel: MainViewModel) {
             .fillMaxSize()
             .offset(0.dp, (-48).dp)
     ){
-        for(i in 1..5){
+        for(i in 1..mainViewModel.pizzaListSize.value){
             Card(
                 backgroundColor = Yellow ,
                 shape = RoundedCornerShape(100),

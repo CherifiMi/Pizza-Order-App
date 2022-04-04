@@ -24,7 +24,9 @@ class MainViewModel @Inject constructor(
     var sizeprogress = mutableStateOf(0f)
     var pizzaQuantity = mutableStateOf(1)
     var sizename = mutableStateOf("Small")
-    var currentpizza = mutableStateOf(1)
+
+    var currentpizza = mutableStateOf(2)
+    var pizzaListSize = mutableStateOf(7)
 
     var allPizza = mutableListOf<Pizza>()
 
@@ -45,7 +47,7 @@ class MainViewModel @Inject constructor(
 
     val price = mutableStateOf(1000)
 
-    val pic_url = mutableStateOf("https://i.pinimg.com/originals/90/8c/62/908c62c7153b37d2e7d41f314a257535.jpg")
+    val pic_url = mutableStateOf("https://i.ibb.co/fFVmg2z/ball.png")
     val ingredients = mutableStateOf(listOf("Cheese","Pizza","Potato"))
     val rating = mutableStateOf(1)
 

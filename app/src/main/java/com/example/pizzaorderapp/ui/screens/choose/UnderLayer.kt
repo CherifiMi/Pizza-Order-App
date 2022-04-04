@@ -61,7 +61,6 @@ fun UnderLayer(mainViewModel: MainViewModel, navController: NavHostController) {
                         mainViewModel.name.value
                     )
                 )
-                mainViewModel.resetData()
             }
         }
     }

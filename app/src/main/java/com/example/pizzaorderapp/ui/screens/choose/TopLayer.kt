@@ -25,7 +25,7 @@ fun TopLayer(mainViewModel: MainViewModel) {
                 .weight(52f),
             visible = mainViewModel.firstmode.value,
             enter =  slideInVertically(),
-            exit =  slideOutVertically()+ shrinkOut()
+            exit =  slideOutVertically()+ fadeOut()
         ){
             BigPizzaImg(mainViewModel)
         }

@@ -56,7 +56,6 @@ fun BottomInfoSheet(mainViewModel: MainViewModel) {
             PizzaDec(mainViewModel.description.value)
 
             AddToCartBtn({
-                mainViewModel.currentpizza.value +=1
                 mainViewModel.firstmode.value = false
             })
 

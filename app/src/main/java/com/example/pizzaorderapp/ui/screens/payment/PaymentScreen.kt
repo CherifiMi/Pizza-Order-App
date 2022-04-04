@@ -44,4 +44,6 @@ fun PaymentScreen(
             fontSize = 50.sp)
 
     }
+
+    mainViewModel.resetData()
 }

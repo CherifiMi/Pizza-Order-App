@@ -38,22 +38,21 @@ fun BigPizzaImg(mainViewModel: MainViewModel) {
                         x = dragAmount.toInt()
                                        },
                     onDragEnd = {
+
                         if(x>0){
-
-                            if(mainViewModel.currentpizza.value>=1){
-                                ma
+                            if(mainViewModel.currentpizza.value > 1){
+                                mainViewModel.currentpizza.value -=1
                             }
-
-                            Log.d("HILLODRAG", "SWIPE:3")
                         }else{
-                            Log.d("HILLODRAG", "3:EPIWS")
+                            if(mainViewModel.currentpizza.value <  mainViewModel.pizzaListSize.value){
+                                mainViewModel.currentpizza.value +=1
+                            }
                         }
+
+                        Log.d("HILLODRAG", mainViewModel.currentpizza.value.toString())
 
                     }
                 )
-                //detectHorizontalDragGestures { change, dragAmount ->
-                //    change.consumeAllChanges()
-                //}
             }
             .offset(0.dp, (-160).dp)
             .scale(1.3f)

@@ -25,7 +25,7 @@ class MainViewModel @Inject constructor(
     var pizzaQuantity = mutableStateOf(1)
     var sizename = mutableStateOf("Small")
 
-    var currentpizza = mutableStateOf(2)
+    var currentpizza = mutableStateOf(1)
     var pizzaListSize = mutableStateOf(7)
 
     var allPizza = mutableListOf<Pizza>()

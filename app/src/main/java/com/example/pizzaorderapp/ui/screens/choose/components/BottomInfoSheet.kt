@@ -68,6 +68,7 @@ fun BottomInfoSheet(mainViewModel: MainViewModel) {
 fun PizzaName(name: String) {
     Text(
         modifier = Modifier.padding(32.dp,16.dp),
+        maxLines = 1,
         text = name,
         color = MyWhite,
         fontFamily = heebo,

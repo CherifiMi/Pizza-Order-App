@@ -49,6 +49,7 @@ fun BigPizzaImg(mainViewModel: MainViewModel) {
                             }
                         }
 
+                        mainViewModel.setData()
                         Log.d("HILLODRAG", mainViewModel.currentpizza.value.toString())
 
                     }

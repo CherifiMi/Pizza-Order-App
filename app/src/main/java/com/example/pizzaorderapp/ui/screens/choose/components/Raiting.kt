@@ -11,7 +11,7 @@ import com.example.pizzaorderapp.R
 import com.example.pizzaorderapp.ui.theme.Yellow
 
 @Composable
-fun Raiting(r: Int) {
+fun Raiting(r: Float) {
     Box(
         Modifier
             .wrapContentHeight()

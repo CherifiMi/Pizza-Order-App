@@ -15,6 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.constraintlayout.compose.ExperimentalMotionApi
 import androidx.constraintlayout.compose.MotionLayout
 import androidx.constraintlayout.compose.MotionScene
+import coil.compose.rememberAsyncImagePainter
 import com.example.pizzaorderapp.R
 import com.example.pizzaorderapp.viewModel.MainViewModel
 
@@ -47,7 +48,7 @@ fun PizzaImg(mainViewModel: MainViewModel) {
         modifier = Modifier.fillMaxWidth()
     ) {
         Image(
-            painter = painterResource(id = R.drawable.pizza),
+            painter = rememberAsyncImagePainter(mainViewModel.pic_url.value),
             contentDescription = "pizza",
             modifier = Modifier
                 .clip(CircleShape)

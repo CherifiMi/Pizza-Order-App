@@ -39,11 +39,16 @@ class MainActivity : ComponentActivity() {
     lateinit var navController: NavHostController
     private val mainViewModel: MainViewModel by viewModels()
 
-    @ExperimentalAnimationApi
-    @ExperimentalMaterialApi
+
     @ExperimentalMotionApi
+    @ExperimentalMaterialApi
+    @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mainViewModel.addPizza()
+        mainViewModel.addPizza()
+        mainViewModel.setData()
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
 

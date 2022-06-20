@@ -14,6 +14,7 @@ import com.example.pizzaorderapp.ui.theme.heebo
 fun PizzaTitle(name: String) {
     Text(
         modifier = Modifier.padding(32.dp,0.dp),
+        maxLines = 1,
         text = name,
         color = MyWhite,
         fontFamily = heebo,

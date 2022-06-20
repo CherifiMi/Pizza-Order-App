@@ -46,8 +46,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // testttttttttttt
-
+        //test 2
         mainViewModel.addPizza()
         mainViewModel.setData()
 

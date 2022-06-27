@@ -33,15 +33,6 @@ class MainViewModel @Inject constructor(
     var pizzaListSize = mutableStateOf(1)
 
 
-    fun test(){
-
-
-
-
-
-    }
-
-
     fun resetData(){
         firstmode.value = true
         sizeprogress.value = 0f

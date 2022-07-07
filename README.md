@@ -43,7 +43,7 @@ it is using a custem made API for storing clints orders and the database of the 
 
 ## MAD Score
 ![summary](https://user-images.githubusercontent.com/98290339/177838031-b316d373-b0ac-47e0-8ed7-bb838c10364f.png)
-e![kotlin](https://user-images.githubusercontent.com/98290339/177838025-30c3ea0d-a42f-47b1-bd61-66188e6e25bb.png)
+![kotlin](https://user-images.githubusercontent.com/98290339/177838025-30c3ea0d-a42f-47b1-bd61-66188e6e25bb.png)
 
 
 

@@ -1,19 +1,17 @@
 <h1 align="center">Pizza Ordering App</h1>
 
 <p align="center">  
-🍕 this app demonstrates modern Android development with Hilt, Coroutines, Flow, Jetpack (Room, ViewModel), and Material Design based on MVVM architecture.
+🍕 this app demonstrates modern Android development with Hilt, Coroutines, Flow, Jetpack , and Material Design based on MVVM architecture.
 and shows the integration of Strip payment and mapBox location picker
 </p>
 
 <img width="1569" alt="Frame 3" src="https://user-images.githubusercontent.com/98290339/177796471-6deb98cb-ddd5-4567-a4ca-8366079620ea.png">
 
 ## What I've learned
-- g
-- g
-- g
-- g
-- g
-- g
+- using motion layout for complex animations
+- making a Custom slider
+- making animated navigation
+- using global stats
 
 <img src="https://user-images.githubusercontent.com/98290339/177801075-8177e979-3671-4879-8ff5-d31b0df268da.png" align="right" width="32%"/>
 
@@ -29,19 +27,22 @@ and shows the integration of Strip payment and mapBox location picker
     -   Repository Pattern
 - Custom Views
 		- 
--
--
-- g
-- g
-- g
-- g
+- Coil for loading pics from urls 
+- Motion Layout for complex animation
+- Navigation Animation 
+- Compose Navigation
+- Retrofit for API calls
+
 
 ## Open API
-it is using the **** for
+it is using a custem made API for storing clints orders and the database of the pizza menu
+[the pizza ordering API]() is made using [Ktor]() and it uses [MongoDB]() as a database
 
 
 ## MAD Score
-![summary](https://user-images.githubusercontent.com/98290339/177800322-a6588ac4-a8c9-495f-98f8-e5cc35048f68.png)
+![summary](https://user-images.githubusercontent.com/98290339/177838031-b316d373-b0ac-47e0-8ed7-bb838c10364f.png)
+e![kotlin](https://user-images.githubusercontent.com/98290339/177838025-30c3ea0d-a42f-47b1-bd61-66188e6e25bb.png)
+
 
 
 ## Architecture

@@ -26,7 +26,9 @@ and shows the integration of Strip payment and mapBox location picker
     -   [Bindables](https://github.com/skydoves/bindables) - Android DataBinding kit for notifying data changes to UI layers.
     -   Repository Pattern
 - Custom Views
-		- 
+	- Spinning image size picker
+	- the rating starts bar 
+
 - Coil for loading pics from urls 
 - Motion Layout for complex animation
 - Navigation Animation 

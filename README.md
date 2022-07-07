@@ -17,7 +17,7 @@ and shows the integration of Strip payment and mapBox location picker
 
 ## Tech stack & libraries
 
--   Minimum SDK
+-   Minimum SDK level 23
 -   [Hilt](https://dagger.dev/hilt/) for dependency injection.
 -   [Kotlin](https://kotlinlang.org/) based, [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
 

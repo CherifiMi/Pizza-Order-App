@@ -9,9 +9,9 @@ and shows the integration of Strip payment and mapBox location picker
 
 ## What I've learned
 - using motion layout for complex animations
-- making a Custom slider
+- making a custom slider
 - making animated navigation
-- using global stats
+- using global states
 
 <img src="https://user-images.githubusercontent.com/98290339/177801075-8177e979-3671-4879-8ff5-d31b0df268da.png" align="right" width="32%"/>
 

@@ -80,7 +80,7 @@ class MainViewModel @Inject constructor(
             listOf(
 
                 Pizza(
-                    2,
+                    1,
                     "Blue Cheese Pizza",
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." ,
                     2055,3200,6000,
@@ -89,7 +89,7 @@ class MainViewModel @Inject constructor(
                     3.7f
                 ),
                 Pizza(
-                    3,
+                    2,
                     "Sosig Pizza",
                     "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,",
                     1900,3080,3505,
@@ -98,7 +98,7 @@ class MainViewModel @Inject constructor(
                     3f
                 ),
                 Pizza(
-                    4,
+                    3,
                     "Onion Pizza",
                     "content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncove",
                     1111,2222,9999,
@@ -107,7 +107,7 @@ class MainViewModel @Inject constructor(
                     0f
                 ),
                 Pizza(
-                    5,
+                    4,
                     "Margherita Pizza",
                     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum",
                     1955,2655,2700,
@@ -116,7 +116,7 @@ class MainViewModel @Inject constructor(
                     3f
                 ),
                 Pizza(
-                    1,
+                    5,
                     "Pepper Pizza",
                     "d and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
                     1599,2099,2200,

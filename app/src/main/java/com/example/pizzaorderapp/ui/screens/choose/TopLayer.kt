@@ -43,21 +43,8 @@ fun TopLayer(mainViewModel: MainViewModel) {
         ){
             Box() {
 
-                //BigPizzaImg(mainViewModel)
+                BigPizzaImg(mainViewModel)
 
-                LazyRow(
-                    Modifier
-                        .offset(0.dp, (-160).dp)
-                        .scale(1.3f)
-                        .fillMaxSize().background(MyWhite)
-                ){
-                    items(items = mainViewModel.allPizza.toList()){
-                        Text(text = it.name)
-                        //Image(
-                        //    painter = rememberAsyncImagePainter(it.pic_url),
-                        //    contentDescription = "")
-                    }
-                }
             }
 
         }
